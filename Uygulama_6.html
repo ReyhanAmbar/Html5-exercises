@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hemen Üye Ol</title>
+  </head>
+  <body>
+    <!-- form'un action attribute'de bir dosya adı veriyoruz ve bu dosyadaki kod bilgisini server tarafında kullancaz.
+    Yani yazdığımız bilgi(kaydetmek veya kullanmak için) action'da belirttiğimiz sayfaya gider.
+    form elemanları ile kullanıcıdan bilgileri toplamak ve topladığımız bilgileri server'a göndericez ve 
+    server tarafında yazdığımız kodda gönderilen bilgileri alıp herhangi bir yerde kullancak. -->
+
+    <!-- label'la vereceğimiz for bilgisi input'a vereceğimiz id ile ilişkilendiriliyor olması gerekiyor.
+    Yani input'un id bilgisi ile label'ın for bilgisi aynı olmalı. -->
+
+    <!-- label ve input inline elemanlar oldukları için içerik kadar yer kaplarlar ama siz alt alta gelmesini 
+    istiyorsanız bunları div içerisine albilirsiniz çünkü  div block elemandır ve satırı tamamen kaplar. -->
+
+    <!-- Bir de input'taki name özelliği form da action da verdiğimiz dosyadan bu veriye ulaşmak için kullanacağımız ad.
+    Ama id bilgisi o anda html sayfasında kullandığımız özelliktir. -->
+
+    <!-- input'ta radiogroup seçersek ve name özelliğine bir isim verip bütün radiogroup'lara verirsek 
+        bunu o zaman bunların aynı grup içinde olduğunu anlar ve bir seçim yapmamızı sağlar. -->
+
+    <!-- input'un id'sini ve label'ın for'unu aynı değer verirsek label için yazdığımız yazıya tıklayınca da radiogroup'u seçer 
+        bunları aynı yapmazsak yazıya tıklayınca seçmez.Radio butona tıklamamız gerekir. -->
+
+    <h1>Lütfen Formu Eksiksiz Doldurunuz!</h1>
+    <hr />
+    <!-- çizgi eklemek için kullanıyoruz -->
+    <br /><br />
+
+    <h3>Hesap Bilgileriniz</h3>
+
+    <table>
+      <tr>
+        <td style="width: 120px">
+          <label for="username">Kullanıcı Adı:</label>
+        </td>
+
+        <td>
+          <input
+            type="text"
+            id="username"
+            placeholder="Kullanıcı Adı giriniz"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="eposta">Eposta:</label>
+        </td>
+
+        <td>
+          <input type="text" id="eposta" placeholder="Eposta giriniz" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="parola">Parola:</label>
+        </td>
+
+        <td>
+          <input type="text" id="parola" placeholder="Parola giriniz" />
+        </td>
+      </tr>
+    </table>
+
+    <h3>Kişisel Bilgileriniz</h3>
+
+    <table>
+      <tr>
+        <td style="width: 120px">
+          <label for="ad">Adınız:</label>
+        </td>
+
+        <td>
+          <input type="text" id="ad" placeholder="Adınızı giriniz" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="soyad">Soyadınız:</label>
+        </td>
+
+        <td>
+          <input type="text" id="soyad" placeholder="Soyadınızı giriniz" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="şehir">Şehir:</label>
+        </td>
+
+        <td>
+          <select id="şehir">
+            <option value="0">Seçiniz</option>
+            <option value="1">Manisa</option>
+            <option value="2">İzmir</option>
+            <option value="3">Antalya</option>
+            <option value="4">İstanbul</option>
+            <option value="5">Ankara</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="cinsiyet">Cinsiyet:</label>
+        </td>
+        <td>
+          <input type="radio" name="cinsiyet" />Erkek
+          <input type="radio" name="cinsiyet" />Kadın
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="hobiler">Hobileriniz:</label>
+        </td>
+        <td>
+          <input type="checkbox" />Sinema <input type="checkbox" />Gezmek
+          <input type="checkbox" />Spor <input type="checkbox" />Kitap Okumak
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+
+        <td>
+          <button type="submit">Kaydet</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

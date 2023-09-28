@@ -26,111 +26,164 @@
     <!-- input'un id'sini ve label'ın for'unu aynı değer verirsek label için yazdığımız yazıya tıklayınca da radiogroup'u seçer 
         bunları aynı yapmazsak yazıya tıklayınca seçmez.Radio butona tıklamamız gerekir. -->
 
-    <h1>Lütfen Formu Eksiksiz Doldurunuz!</h1>
-    <hr />
-    <!-- çizgi eklemek için kullanıyoruz -->
-    <br /><br />
+    <!-- Örnek Uygulama
 
-    <h3>Hesap Bilgileriniz</h3>
+    <form action="register.php">
+      <div>
+        <label for="name">Adınız:</label>
+        <input type="text" id="name" />
+      </div>
 
-    <table>
-      <tr>
-        <td style="width: 120px">
-          <label for="username">Kullanıcı Adı:</label>
-        </td>
+      <div>
+        <label for="surname">Soyad:</label>
+        <input type="text" id="surname" />
+      </div>
 
-        <td>
-          <input
-            type="text"
-            id="username"
-            placeholder="Kullanıcı Adı giriniz"
-          />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="eposta">Eposta:</label>
-        </td>
+      <div>
+        <p>En sevdiğiniz programlama dili:</p>
+        <input type="radio" id="html" name="programlama" />
+        <label for="html">Html</label>
+        <input type="radio" id="css" name="programlama" />
+        <label for="css">Css</label>
+        <input type="radio" id="javascript" name="programlama" />
+        <label for="javascript">Javascript</label>
+      </div>
 
-        <td>
-          <input type="text" id="eposta" placeholder="Eposta giriniz" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="parola">Parola:</label>
-        </td>
+      <div>
+        <p>En sevdiğiniz programlama dili:</p>
+        <input type="checkbox" id="html2" />
+        <label for="html">Html</label>
+        <input type="checkbox" id="css2" />
+        <label for="css">Css</label>
+        <input type="checkbox" id="javascript2" />
+        <label for="javascript">Javascript</label>
+      </div>
 
-        <td>
-          <input type="text" id="parola" placeholder="Parola giriniz" />
-        </td>
-      </tr>
-    </table>
+      <div>
+        <label for="intro">Kendini Anlat</label>
+        <textarea id="intro" cols="25" rows="5"></textarea>
+      </div>
 
-    <h3>Kişisel Bilgileriniz</h3>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" />
+      </div>
 
-    <table>
-      <tr>
-        <td style="width: 120px">
-          <label for="ad">Adınız:</label>
-        </td>
+      <div>
+        <label for="parola">Parola:</label>
+        <input type="password" id="parola" />
+      </div>
 
-        <td>
-          <input type="text" id="ad" placeholder="Adınızı giriniz" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="soyad">Soyadınız:</label>
-        </td>
+      <button type="submit">Kaydet</button>
+    </form> -->
 
-        <td>
-          <input type="text" id="soyad" placeholder="Soyadınızı giriniz" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="şehir">Şehir:</label>
-        </td>
+    <form action="kaydet.php">
+      <h1>Lütfen Formu Eksiksiz Doldurunuz!</h1>
+      <hr />
+      <!-- çizgi eklemek için kullanıyoruz -->
+      <br /><br />
 
-        <td>
-          <select id="şehir">
-            <option value="0">Seçiniz</option>
-            <option value="1">Manisa</option>
-            <option value="2">İzmir</option>
-            <option value="3">Antalya</option>
-            <option value="4">İstanbul</option>
-            <option value="5">Ankara</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="cinsiyet">Cinsiyet:</label>
-        </td>
-        <td>
-          <input type="radio" name="cinsiyet" />Erkek
-          <input type="radio" name="cinsiyet" />Kadın
-        </td>
-      </tr>
+      <h3>Hesap Bilgileriniz</h3>
 
-      <tr>
-        <td>
-          <label for="hobiler">Hobileriniz:</label>
-        </td>
-        <td>
-          <input type="checkbox" />Sinema <input type="checkbox" />Gezmek
-          <input type="checkbox" />Spor <input type="checkbox" />Kitap Okumak
-        </td>
-      </tr>
+      <table>
+        <tr>
+          <td style="width: 120px">
+            <label for="username">Kullanıcı Adı:</label>
+          </td>
 
-      <tr>
-        <td></td>
+          <td>
+            <input
+              type="text"
+              id="username"
+              placeholder="Kullanıcı Adı giriniz"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="eposta">Eposta:</label>
+          </td>
 
-        <td>
-          <button type="submit">Kaydet</button>
-        </td>
-      </tr>
-    </table>
+          <td>
+            <input type="text" id="eposta" placeholder="Eposta giriniz" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="parola">Parola:</label>
+          </td>
+
+          <td>
+            <input type="text" id="parola" placeholder="Parola giriniz" />
+          </td>
+        </tr>
+      </table>
+
+      <h3>Kişisel Bilgileriniz</h3>
+
+      <table>
+        <tr>
+          <td style="width: 120px">
+            <label for="ad">Adınız:</label>
+          </td>
+
+          <td>
+            <input type="text" id="ad" placeholder="Adınızı giriniz" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="soyad">Soyadınız:</label>
+          </td>
+
+          <td>
+            <input type="text" id="soyad" placeholder="Soyadınızı giriniz" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="şehir">Şehir:</label>
+          </td>
+
+          <td>
+            <select id="şehir">
+              <option value="0">Seçiniz</option>
+              <option value="1">Manisa</option>
+              <option value="2">İzmir</option>
+              <option value="3">Antalya</option>
+              <option value="4">İstanbul</option>
+              <option value="5">Ankara</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="cinsiyet">Cinsiyet:</label>
+          </td>
+          <td>
+            <input type="radio" name="cinsiyet" />Erkek
+            <input type="radio" name="cinsiyet" />Kadın
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="hobiler">Hobileriniz:</label>
+          </td>
+          <td>
+            <input type="checkbox" />Sinema <input type="checkbox" />Gezmek
+            <input type="checkbox" />Spor <input type="checkbox" />Kitap Okumak
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+
+          <td>
+            <button type="submit">Kaydet</button>
+          </td>
+        </tr>
+      </table>
+    </form>
   </body>
 </html>
